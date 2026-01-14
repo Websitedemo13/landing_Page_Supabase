@@ -1,3 +1,4 @@
+--D:\JOBS\landing_Page_Supabase\cms-admin-and-frontend\scripts\004_setup_admin.sh--
 #!/bin/bash
 
 # CMS Admin Setup Script

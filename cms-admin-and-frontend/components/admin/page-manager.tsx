@@ -1,7 +1,7 @@
 "use client"
 
 import type { Page } from "@/types/cms"
-import { deletePage } from "@/lib/cms"
+import { deletePage } from "@/lib/cms.client"
 import { Trash2, FileText } from "lucide-react"
 
 interface PageManagerProps {

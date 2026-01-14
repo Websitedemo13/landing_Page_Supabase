@@ -1,3 +1,4 @@
+-- D:\JOBS\landing_Page_Supabase\cms-admin-and-frontend\scripts\005_add_footer_social_tables.sql--
 -- Footer Table for managing footer content
 CREATE TABLE IF NOT EXISTS public.footer_sections (
   id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),

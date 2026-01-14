@@ -1,3 +1,4 @@
+--D:\JOBS\landing_Page_Supabase\cms-admin-and-frontend\scripts\003_create_admin_user.sql--
 -- This script creates an admin user in Supabase Auth
 -- Run this in the Supabase SQL editor or use the Supabase dashboard
 -- Email: tester.s17.org.vn@gmail.com

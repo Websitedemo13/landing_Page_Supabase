@@ -11,7 +11,7 @@ import {
   updatePage,
   updateSectionVisibility,
   updateSectionOrder,
-} from "@/lib/cms"
+} from "@/lib/cms.client"
 import { SectionEditor } from "./section-editor"
 import { Plus, GripVertical, Trash2, Eye, EyeOff } from "lucide-react"
 

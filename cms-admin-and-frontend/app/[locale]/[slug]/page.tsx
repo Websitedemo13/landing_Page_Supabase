@@ -1,4 +1,4 @@
-import { getPageBySlug, getPageSections, getSiteConfig, getMenuByLocation } from "@/lib/cms"
+import { getPageBySlug, getPageSections, getSiteConfig, getMenuByLocation } from "@/lib/cms.client"
 import { SectionFactory } from "@/components/cms/section-factory"
 import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"

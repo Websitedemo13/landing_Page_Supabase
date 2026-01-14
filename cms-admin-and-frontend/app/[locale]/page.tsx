@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { getPages, getSiteConfig, getMenuByLocation } from "@/lib/cms"
+import { getPages, getSiteConfig, getMenuByLocation } from "@/lib/cms.client"
 import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
 import Link from "next/link"

@@ -1,3 +1,4 @@
+--D:\JOBS\landing_Page_Supabase\cms-admin-and-frontend\scripts\002_initialize_cms_data.sql--
 -- Initialize default site configuration
 INSERT INTO public.site_config (
   logo_url,

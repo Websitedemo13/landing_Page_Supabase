@@ -1,3 +1,4 @@
+-- D:\JOBS\landing_Page_Supabase\cms-admin-and-frontend\scripts\001_create_cms_tables.sql
 -- Enable UUID extension
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 

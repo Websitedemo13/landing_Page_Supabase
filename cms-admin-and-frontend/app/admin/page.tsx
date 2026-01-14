@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { getAllPages, createPage } from "@/lib/cms"
+import { getAllPages, createPage } from "@/lib/cms.client"
 import { createClient } from "@/lib/supabase/client"
 import { PageManager } from "@/components/admin/page-manager"
 import { FooterManager } from "@/components/admin/footer-manager"
