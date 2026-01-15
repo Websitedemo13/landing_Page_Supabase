@@ -1,4 +1,3 @@
-import type React from "react"
 import type { Metadata } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
@@ -14,14 +13,14 @@ export const metadata: Metadata = {
   description: "Dynamic CMS-powered website",
 }
 
-export default function LocaleLayout({
+export default async function LocaleLayout({
   children,
   params,
 }: {
   children: React.ReactNode
   params: Promise<{ locale: string }>
 }) {
-  const { locale } = React.use(params)
+  const { locale } = await params
   return (
     <html suppressHydrationWarning className={geist.className} lang={locale}>
       <body className={`${geistMono.className} font-sans antialiased`}>
