@@ -30,6 +30,7 @@ export function MobileMenu({ menu, locale }: MobileMenuProps) {
                 key={item.id}
                 href={item.is_external ? item.url : `/${locale}${item.url}`}
                 target={item.is_external ? "_blank" : undefined}
+                rel={item.is_external ? "noopener noreferrer" : undefined}
                 className="px-4 py-3 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 border-b last:border-b-0 transition"
                 onClick={() => setIsOpen(false)}
               >
