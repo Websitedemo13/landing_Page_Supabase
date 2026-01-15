@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 export default async function HomePage({ params }: PageProps) {
-  const { locale } = params
+  const { locale } = await params
   const { data: pages } = await getPages()
   const { data: siteConfig } = await getSiteConfig()
   const { data: headerMenu } = await getMenuByLocation("header")
