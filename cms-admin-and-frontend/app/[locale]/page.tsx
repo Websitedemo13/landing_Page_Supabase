@@ -6,11 +6,11 @@ import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 
 interface PageProps {
-  params: { locale: string }
+  params: Promise<{ locale: string }>
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { locale } = params
+  const { locale } = await params
   const title = locale === "vi" ? "CMS Site - Trang chủ" : "CMS Site - Home"
   const description =
     locale === "vi"
