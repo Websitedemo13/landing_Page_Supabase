@@ -26,18 +26,21 @@ export function MobileMenu({ menu, locale }: MobileMenuProps) {
       {isOpen && (
         <div className="absolute top-16 left-0 right-0 bg-background/95 backdrop-blur-xl border-b border-border/40 shadow-xl z-50 animate-fade-in">
           <nav className="flex flex-col p-4 gap-1">
-            {menu?.items?.map((item) => (
-              <Link
-                key={item.id}
-                href={item.is_external ? item.url : `/${locale}${item.url}`}
-                target={item.is_external ? "_blank" : undefined}
-                rel={item.is_external ? "noopener noreferrer" : undefined}
-                className="px-4 py-3 text-sm font-medium text-foreground/70 hover:text-foreground hover:bg-foreground/5 rounded-lg transition-all duration-200"
-                onClick={() => setIsOpen(false)}
-              >
-                {typeof item.label === "object" ? (item.label[locale] || item.label.en) : item.label}
-              </Link>
-            ))}
+            {menu?.items?.map((item) => {
+              const label = item?.label ? (typeof item.label === "object" ? (item.label[locale] || item.label.en || "Menu Item") : item.label) : "Menu Item"
+              return (
+                <Link
+                  key={item.id}
+                  href={item.is_external ? item.url : `/${locale}${item.url}`}
+                  target={item.is_external ? "_blank" : undefined}
+                  rel={item.is_external ? "noopener noreferrer" : undefined}
+                  className="px-4 py-3 text-sm font-medium text-foreground/70 hover:text-foreground hover:bg-foreground/5 rounded-lg transition-all duration-200"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {label}
+                </Link>
+              )
+            })}
           </nav>
         </div>
       )}
