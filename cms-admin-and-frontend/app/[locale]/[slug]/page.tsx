@@ -5,11 +5,11 @@ import { Footer } from "@/components/layout/footer"
 import { notFound } from "next/navigation"
 
 interface PageProps {
-  params: { locale: string; slug: string }
+  params: Promise<{ locale: string; slug: string }>
 }
 
 export default async function DynamicPage({ params }: PageProps) {
-  const { locale, slug } = params
+  const { locale, slug } = await params
 
   const { data: page, error: pageError } = await getPageBySlug(slug)
   if (pageError || !page) {
