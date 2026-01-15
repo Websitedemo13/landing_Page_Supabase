@@ -35,7 +35,7 @@ export function MobileMenu({ menu, locale }: MobileMenuProps) {
                 className="px-4 py-3 text-sm font-medium text-foreground/70 hover:text-foreground hover:bg-foreground/5 rounded-lg transition-all duration-200"
                 onClick={() => setIsOpen(false)}
               >
-                {item.label[locale] || item.label.en}
+                {typeof item.label === "object" ? (item.label[locale] || item.label.en) : item.label}
               </Link>
             ))}
           </nav>
